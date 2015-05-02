@@ -3,42 +3,63 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: Georgia, Times, 'Times New Roman', serif;
-	background-image : url("images/Vintage-Grunge-Wood-Background.jpg");
+	background : url("images/wall-final.jpg") no-repeat  center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover
+	-o-background-size: cover;
+	background-size: cover;
+	/*-webkit-background-size: cover;*/
+	/*background-size: cover;*/
+	/*background-repeat: no-repeat;*/
 }
 
-header {
-	position: absolute;
-	width: 500px;
-	height: 250px;
-	top: 50%;
-	left: 50%;
-	margin-top: -125px;
-	margin-left: -250px;
-	text-align: center;
-}
-
-header h1 {
-	font-size: 60px;
-	font-weight: 100;
-	margin: 0;
-	padding: 0;
-}
-.container{
+.items-container{
 	padding : 20px
 }
 .list-item {
 	background-color : white;
 	border-radius: 25px;
 	border : 1px solid #E6E8E1;
-	width : 500px;
 	padding: 20px;
-	min-height: 30px;
+	min-height: 70px;
 	margin : 2px;
+	font-size : 170%;
+}
+
+.item-text-box {
+	font-size : 150%;
+	background-color : #ffffff;
+	border-radius: 25px;
+	/*border : 1px #E6E8E1;*/
+	padding: 10px;
+	height: 50px;
+	width : 100%;
+	margin : 2px;
+	color : black;
+	opacity : .6;
+	filter:alpha(opacity=60);
 }
 
 .item  {
 	line-height:30px;
 	float : left;
+}
+
+.delete-button{
+	float:right !important;
+	margin-right : 5px;
+	height : 30px;
+	cursor:pointer;
+	font-weight: bold;
+	color : black;
+}
+
+
+.done-button{
+	float:right !important;
+	margin-right : 5px;
+	height : 30px;
+	cursor:pointer;
 }
 
 .checkBox {
@@ -48,9 +69,9 @@ header h1 {
 	text-align:center;
 	line-height:15px;
 	text-shadow:0px 0px 3px #eee;
-	height:30px;
+	height:50px;
 	width:20px;
-	float:right;
+	float:left;
 }
 
 .strikeThrough{

@@ -1,8 +1,8 @@
 'use strict';
 const app = require('app');
+var repository = require('./js/backEnd/itemsRepository');
 const BrowserWindow = require('browser-window');
-
-// prevent window being GC'd
+var ipc = require('ipc');
 let mainWindow = null;
 
 app.on('window-all-closed', function () {
@@ -11,10 +11,20 @@ app.on('window-all-closed', function () {
 	}
 });
 
+
+ipc.on('saveItems', function(event, arg) {
+	repository.saveItems(arg);
+});
+
+ipc.on('getItems', function(event) {
+	event.returnValue = repository.loadItems();
+});
+
+
 app.on('ready', function () {
 	mainWindow = new BrowserWindow({
 		width: 600,
-		height: 400,
+		height: 1000,
 		resizable: false
 	});
 
@@ -25,4 +35,6 @@ app.on('ready', function () {
 		// for multiple windows store them in an array
 		mainWindow = null;
 	});
+
+
 });
