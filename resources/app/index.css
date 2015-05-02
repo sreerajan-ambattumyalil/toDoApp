@@ -1,0 +1,79 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: Georgia, Times, 'Times New Roman', serif;
+	background : url("images/wall-final.jpg") no-repeat  center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover
+	-o-background-size: cover;
+	background-size: cover;
+	/*-webkit-background-size: cover;*/
+	/*background-size: cover;*/
+	/*background-repeat: no-repeat;*/
+}
+
+.items-container{
+	padding : 20px
+}
+.list-item {
+	background-color : white;
+	border-radius: 25px;
+	border : 1px solid #E6E8E1;
+	padding: 20px;
+	min-height: 70px;
+	margin : 2px;
+	font-size : 170%;
+}
+
+.item-text-box {
+	font-size : 150%;
+	background-color : #ffffff;
+	border-radius: 25px;
+	/*border : 1px #E6E8E1;*/
+	padding: 10px;
+	height: 50px;
+	width : 100%;
+	margin : 2px;
+	color : black;
+	opacity : .6;
+	filter:alpha(opacity=60);
+}
+
+.item  {
+	line-height:30px;
+	float : left;
+}
+
+.delete-button{
+	float:right !important;
+	margin-right : 5px;
+	height : 30px;
+	cursor:pointer;
+	font-weight: bold;
+	color : black;
+}
+
+
+.done-button{
+	float:right !important;
+	margin-right : 5px;
+	height : 30px;
+	cursor:pointer;
+}
+
+.checkBox {
+	content:"\2714"; /* Tick */
+	color:white;
+	background-color: #666;
+	text-align:center;
+	line-height:15px;
+	text-shadow:0px 0px 3px #eee;
+	height:50px;
+	width:20px;
+	float:left;
+}
+
+.strikeThrough{
+	text-decoration: line-through;
+}

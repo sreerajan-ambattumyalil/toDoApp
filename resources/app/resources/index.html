@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Things to be done</title>
+		<link rel="stylesheet" href="index.css">
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+		<script>
+			if (window.require) {
+				window.nodeRequire = window.require;
+				delete window.require;
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<section class="main">
+					<div ng-controller="HomeController">
+							<div class="items-container" ng-controller="AddItemController">
+								<form class="items-container" ng-submit="addItem()" ng-controller="AddItemController">
+									<input type="text" ng-model="title" class="item-text-box" placeholder="Add"/>
+								</form>
+							</div>
+						<div class="items-container">
+							<div class="list-item" ng-repeat="item in items track by $index">
+								<div class="item" ng-class="{'strikeThrough' : item.status}">{{item.title}}</div>
+								<div style="float:right">
+									<!-- <input type="checkbox" ng-attr-id="item.id" ng-model="item.status" class="checkBox" name="item.title" value="" ng-checked="item.status"> -->
+									<button type="button" ng-click="removeItem(item.id)" class="delete-button btn btn-danger"></button>
+									<button type="button" ng-click="completeItem(item.id)" ng-class="{'btn-success' : item.status, 'btn-warning' : !item.status}" class="delete-button btn"></button>
+								</div>
+							</div>
+				</div>
+			</div>
+			</section>
+			<footer></footer>
+		</div>
+		<script data-main="js/main" src="bower_components/requirejs/require.js"></script>
+	</body>
+</html>
